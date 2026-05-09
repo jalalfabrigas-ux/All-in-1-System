@@ -7,11 +7,12 @@ public class SystemOne{
 
         System.out.println("WELCOME TO SYSTEM VERSION 1");
         System.out.print("PLEASE SELECT SYSTEM DESIGN ^_^");
-        System.out.print("\n1.Calculator System");
-        System.out.print("\n2.Student Grade System");
+        System.out.print("\n1. Calculator System");
+        System.out.print("\n2. Student Grade System");
         System.out.print("\n3. Odd or Even Number Checker System");
         System.out.print("\n4. Voting Eligibility System");
         System.out.print("\n5. ATM Machine System");
+        System.out.print("\n6. MORE System Coming Soon! Stay Tuned!");
         System.out.println();
         int choice = sc.nextInt();
 

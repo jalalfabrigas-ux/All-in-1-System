@@ -6,10 +6,12 @@ public class SystemOne{
         Scanner sc=new Scanner(System.in);
 
         System.out.println("WELCOME TO SYSTEM VERSION 1");
-        System.out.println("PLEASE SELECT SYSTEM DESIGN ^_^");
+        System.out.print("PLEASE SELECT SYSTEM DESIGN ^_^");
         System.out.print("\n1.Calculator System");
         System.out.print("\n2.Student Grade System");
         System.out.print("\n3. Odd or Even Number Checker System");
+        System.out.print("\n4. Voting Eligibility System");
+        System.out.print("\n5. ATM Machine System");
         System.out.println();
         int choice = sc.nextInt();
 
@@ -103,6 +105,7 @@ case 2:
                 else{
                     System.out.println( "General Average: " + result + " | Remarks: " + "FAILED! NEED REMEDIATION");
                 }
+                break;
 case 3:
                 System.out.println("WELCOME TO ODD OR EVEN NUMBER CHECKER SYSTEM");
                 System.out.print("\nEnter how many numbers you want to input: ");
@@ -130,9 +133,110 @@ case 3:
                 }
                 System.out.println("\nTOTAL EVEN NUMBERS: " + evenCount);
                 System.out.println("TOTAL ODD NUMBERS: " + oddCount);
+                break;
+case 4:
+                System.out.println("Voting Eligibility System");
+                System.out.print("\nEnter your age: ");
+                int age = sc.nextInt();
+
+                if(age >= 18){
+                    System.out.println("You are eligible to vote!");
+                    System.out.println("PROCEDING TO VOTING SYSTEM...");
+                    System.out.print("\nEnter your Name: ");
+                    sc.nextLine();
+                    String name = sc.nextLine();
+                    System.out.print("\nWhat is your Nationality? ");
+                    String nationality = sc.nextLine();
+                    System.out.print("\nEnter your Addess: ");
+                    String address = sc.nextLine();
+                    System.out.print("\nEnter your Contact Number: ");
+                    String contact = sc.nextLine();
+                    System.out.println("\nEnter your Votes ID:");
+                    int voterID = sc.nextInt();
+                    System.out.println("WHO WILL YOU VOTE FOR PRESIDENT? ");
+                    System.out.println("1. Candidate A");
+                    System.out.println("2. Candidate B");
+                    System.out.println("3. Candidate C");
+                    int voteChoice = sc.nextInt();
+                    System.out.println("==VOTER's Full Information==");
+                    System.out.println("Name: " + name);
+                    System.out.println("Age: " + age);
+                    System.out.println("Nationality: " + nationality);
+                    System.out.println("Address: " + address);
+                    System.out.println("Contact Number: " + contact);
+                    System.out.println("Voter ID: " + voterID);
+                    if(voteChoice == 1){
+                        System.out.println("You voted for Candidate A");
+                    }
+                    else if(voteChoice == 2){
+                        System.out.println("You voted for Candidate B");
+                    }
+                    else if(voteChoice == 3){
+                        System.out.println("You voted for Candidate C");
+                    }
+                    else{
+                        System.out.println("Invalid vote choice!");
+                    }
                 }
-                sc.close();
+                else{
+                    System.out.println("You are not Eligible to Vote ! ");
+                }
+                break;
+case 5: 
+                System.out.println("WELCOME TO ATM MACHINE SYSTEM");
+                System.out.print("\nEnter your PIN: ");
+                int pin = sc.nextInt();
+                int myPin  = 6363;
+
+                if(pin != myPin){
+                    System.out.println("Invalid PIN! Access Denied.");
+                    return;
+                }else{
+                System.out.println("PIN accepted. Welcome to the ATM Machine System!");
+                
+                double balance = 1000.00;
+                System.out.println("Your current balance is: $" + balance);
+                System.out.println("What transaction would you like to perform?");
+                System.out.println("1. Deposit");
+                System.out.println("2. Withdraw");
+                int perform = sc.nextInt();
+                
+                switch(perform){
+                case 1:
+                    System.out.println("Enter the amount to deposit: ");
+                    double deposit = sc.nextDouble();
+                    if(deposit <= 0){
+                        System.out.println("Invalid deposit amount!");
+                    }else{
+                        balance += deposit;
+                        System.out.println("Deposit successful! Your new balance is: $" + balance);
+                    }
+                    break;
+                case 2:
+                    System.out.println("Enter the amount to withdraw: ");
+                    double withdraw = sc.nextDouble();
+                    if(withdraw <= 0){
+                        System.out.println("Invalid withdrawal amount!");
+                    }else if(withdraw > balance){
+                        System.out.println("Insufficient funds! Your current balance is: " + balance);{
+                    }
+                    }else{
+                        balance -= withdraw;
+                        System.out.println("Withdrawal successful! Your new balance is: " + balance);
+                    }
+                    break;
+                default:
+                    System.out.println("Invalid transaction choice!");
+                    break;  
+                    }
+                    break;
+                    }
+case 6:
+            System.out.println("NEW SYSTEM COMING SOON! STAY TUNED!");
+                break;
             }
+            sc.close();
     }
+}
 
     

@@ -13,6 +13,7 @@ public class SystemOne{
         System.out.print("\n4. Voting Eligibility System");
         System.out.print("\n5. ATM Machine System");
         System.out.print("\n6. Temperature Converter");
+        System.out.print("\n7. Multiplication Table Generator");
         System.out.println();
         int choice = sc.nextInt();
 
@@ -256,8 +257,41 @@ case 6:
             }
             break;
 case 7:
+            System.out.println("Multiplication Table Generator");
+            System.out.println("Enter number to be Multiplied ");
+            int num = sc.nextInt();
+            System.out.println("Up to ? ( 1 - 10 ) ");
+            int limit = sc.nextInt();
+           
+            for(int i = 0; i<=limit;i++){
+                if(limit <= 10 ){
+                double multiply = num * i;
+                System.out.println( num + " * " + i +" = " + multiply );
+            }
+        }
             System.out.println();
-            
+            break;
+case 8:
+        System.out.println("Number Guessing Game");
+        System.out.println("FOR PLAYER 1: Enter The Secret Number :");
+        int secretNum = sc.nextInt();
+
+        int guess;
+        do{
+            System.out.println("FOR PLAYER 2: GUESS THE NUMBER :");
+            guess = sc.nextInt();
+            if(guess > secretNum){
+                System.out.print("\n" + guess + " number is too high ");
+            }
+            else if(guess < secretNum){
+                System.out.print("\n" + guess + " number is too low ");
+            }
+            else{
+                System.out.println("\nCONGRATSS YOU GUESSED IT ^_^");
+            }
+        }
+        while(guess != secretNum);
+
         }
             sc.close();
     }

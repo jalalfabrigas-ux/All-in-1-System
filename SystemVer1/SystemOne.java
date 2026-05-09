@@ -12,7 +12,7 @@ public class SystemOne{
         System.out.print("\n3. Odd or Even Number Checker System");
         System.out.print("\n4. Voting Eligibility System");
         System.out.print("\n5. ATM Machine System");
-        System.out.print("\n6. MORE System Coming Soon! Stay Tuned!");
+        System.out.print("\n6. Temperature Converter");
         System.out.println();
         int choice = sc.nextInt();
 
@@ -233,9 +233,32 @@ case 5:
                     break;
                     }
 case 6:
-            System.out.println("NEW SYSTEM COMING SOON! STAY TUNED!");
-                break;
+            System.out.println("TEMPERATURE CONVERTER SYSTEM!");
+            System.out.print("1. Celcius to Farenheit || 2. Farenheit to Celcius" + "\n");
+            int converter = sc.nextInt();
+            
+            switch (converter){
+                case 1:
+                    System.out.print("Enter Temperature in Celcius: ");
+                    double celcius = sc.nextDouble();
+                    double resultfarenheit = ( celcius * 9/5) + 32;
+                    System.out.println("Temperature in Farenheit: " + resultfarenheit);
+                    break;
+                case 2:
+                    System.out.print("Enter Temperature in Farenheit: ");
+                    double farenheit = sc.nextDouble();
+                    double resultCelcius = (farenheit - 32) * 5/9;
+                    System.out.println("Temperature in Celcius: " + resultCelcius);
+                    break;
+                default:
+                    System.out.println("Invalid converter choice!");
+                    break;
             }
+            break;
+case 7:
+            System.out.println();
+            
+        }
             sc.close();
     }
 }

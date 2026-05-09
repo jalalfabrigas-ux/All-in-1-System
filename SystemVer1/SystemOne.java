@@ -14,6 +14,9 @@ public class SystemOne{
         System.out.print("\n5. ATM Machine System");
         System.out.print("\n6. Temperature Converter");
         System.out.print("\n7. Multiplication Table Generator");
+        System.out.print("\n8. GUESSING GAME ");
+        System.out.print("\n9. PASSWORD CHECKER ");
+        System.out.print("\n10. Grocery Receipt");
         System.out.println();
         int choice = sc.nextInt();
 
@@ -290,11 +293,62 @@ case 8:
                 System.out.println("\nCONGRATSS YOU GUESSED IT ^_^");
             }
         }
-        while(guess != secretNum);
+            while(guess != secretNum);
+            break;
+case 9:
+            System.out.println("PASSWORD CHECKER");
+            System.out.println("CREATE PASSWORD FIRST");
+            sc.nextLine();
+            String password = sc.nextLine();
 
-        }
-            sc.close();
+            System.out.println("INPUT PASSWORD");
+            String inputPassword = sc.nextLine();
+            if(inputPassword.equals(password)){
+                System.out.println("ACCESS GRANTED!");
+            }else{
+                System.out.println("ACCESS DENIED!");
+            }
+case 10:
+            System.out.println("GROCERY RECEIPT SYSTEM");
+            System.out.println("How many Item's? ");
+            int item = sc.nextInt();
+
+            String[] productName = new String[item];
+            int[] quantity = new int[item];
+            double[] price = new double[item];
+            double[] total = new double [item];
+
+            double grandTotal = 0;
+            for(int i = 0; i <item;i++){
+                System.out.println("ITEM [" + (i+1)+"]: "  );
+                sc.nextLine();
+                System.out.println("Product Name: ");
+                productName[i]=sc.nextLine();
+                System.out.println("Quatity to purchased: ");
+                quantity[i] = sc.nextInt();
+                System.out.println("Price: ");
+                sc.nextLine();
+                price[i] = sc.nextDouble();
+        
+
+                total[i] = quantity[i] * price[i];
+                
+                grandTotal += total[i];
+
+            }
+            System.out.println("==GROCERY RECEIPT==");
+            for(int i = 0;i<item;i++){
+                System.out.println(
+                    productName[i]+ " | Quantity: " + quantity[i] +
+                    " | Price: " + price[i] + " | Total: " + total[i]
+                );
+                System.out.println();
+                System.out.println("=>GRAND TOTAL OF: " + grandTotal);
+            }
+            }
+               sc.close();            
     }
 }
+
 
     

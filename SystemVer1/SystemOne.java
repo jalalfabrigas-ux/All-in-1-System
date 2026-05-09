@@ -9,6 +9,8 @@ public class SystemOne{
         System.out.println("PLEASE SELECT SYSTEM DESIGN ^_^");
         System.out.print("\n1.Calculator System");
         System.out.print("\n2.Student Grade System");
+        System.out.print("\n3. Odd or Even Number Checker System");
+        System.out.println();
         int choice = sc.nextInt();
 
         switch (choice){
@@ -101,10 +103,36 @@ case 2:
                 else{
                     System.out.println( "General Average: " + result + " | Remarks: " + "FAILED! NEED REMEDIATION");
                 }
+case 3:
+                System.out.println("WELCOME TO ODD OR EVEN NUMBER CHECKER SYSTEM");
+                System.out.print("\nEnter how many numbers you want to input: ");
+                int number = sc.nextInt();
+                int[] numArr = new int [number];
 
+                int evenCount = 0;
+                int oddCount = 0;
+
+                for(int i = 0; i < numArr.length; i++){
+
+                System.out.print("Number Input [" + (i + 1) + "]: ");
+                numArr[i] = sc.nextInt();
                 }
-
+                for(int i = 0; i < numArr.length; i++){
+                if(numArr[i] % 2 == 0){
+                evenCount++;
+                System.out.println(numArr[i] + " is an EVEN number.");
+                }
+                else
+                {
+                oddCount++;
+                System.out.println(numArr[i] + " is an ODD number.");
+                }
+                }
+                System.out.println("\nTOTAL EVEN NUMBERS: " + evenCount);
+                System.out.println("TOTAL ODD NUMBERS: " + oddCount);
+                }
                 sc.close();
             }
-        }
+    }
+
     

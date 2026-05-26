@@ -115,7 +115,7 @@ class DrinkItem extends MenuItem {
     }
 }
 
-public class Main {
+public class OOS {
     public static void main(String args[]) {
 
         Scanner sc = new Scanner(System.in);
